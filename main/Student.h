@@ -1,14 +1,11 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "Module.h"
 class Student
-	//include Module.h so that you can use its assignToModule() function. 
-	//Am I doing this right?
 {
 private:
-	std::vector <Student> studentsList;
 	std::string name;
+	std::vector <Student> studentsList;
 public:
 	Student();
 	~Student();

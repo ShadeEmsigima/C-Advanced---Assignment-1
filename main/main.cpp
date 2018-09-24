@@ -14,15 +14,28 @@
 
 int main()
 {
-	//create 10 students
-	Student student1();
-	Student student2();
-	Student student3();
-
 	//create 3 teachers
 	Teacher teacherCPP("Edwin");
 	Teacher teacherPython("Valentijn");
 	Teacher teacherHTML("Ton");
+
+
+	//create a list for the teachers on the heap (not working)
+	std::vector<Teacher>* pTeacherList = new std::vector<Teacher>();
+	pTeacherList->push_back(teacherCPP);
+
+
+	std::cout << pTeacherList[0];
+
+	//example vector
+	std::vector<int> hi;
+	hi.push_back(10);
+	std::cout << hi[0];
+
+	//create 10 students
+	Student student1();
+	Student student2();
+	Student student3();
 
 	//create 3 modules
 
