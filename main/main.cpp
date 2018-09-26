@@ -22,10 +22,15 @@ int main()
 
 	//create a list for the teachers on the heap (not working)
 	std::vector<Teacher>* pTeacherList = new std::vector<Teacher>();
-	pTeacherList->push_back(teacherCPP);
+	
+	//pTeacherList->push_back(teacherCPP);
 
+	int num = 2;
+	std::cout << num << std::endl; //still normal now. Dont know how to get
+	//the data out of a dereferenced pointer of something that has already
+	//been created on the heap.
 
-	std::cout << pTeacherList[0];
+	//std::cout << *pTeacherList;
 
 	//example vector
 	std::vector<int> hi;
