@@ -14,36 +14,58 @@
 
 int main()
 {
-	//create 3 teachers
+	//create 3 teachers on heap
 	Teacher teacherCPP("Edwin");
 	Teacher teacherPython("Valentijn");
 	Teacher teacherHTML("Ton");
 
+	std::cout << std::endl;
 
-	//create a list for the teachers on the heap (not working)
-	std::vector<Teacher>* pTeacherList = new std::vector<Teacher>();
-	
-	//pTeacherList->push_back(teacherCPP);
+	//create 10 students on heap
+	//Im trying to add objects of students to their list using a seperate method within 
+	//their datatype class.
+	//Student obj("Li");
 
-	int num = 2;
-	std::cout << num << std::endl; //still normal now. Dont know how to get
-	//the data out of a dereferenced pointer of something that has already
-	//been created on the heap.
+	//make the vector lists
+	std::vector<Student>* pStudentList = new std::vector<Student>();
 
-	//std::cout << *pTeacherList;
+	Student students("Li");
+	pStudentList->push_back(students);
 
-	//example vector
-	std::vector<int> hi;
-	hi.push_back(10);
-	std::cout << hi[0];
 
-	//create 10 students
-	Student student1();
-	Student student2();
-	Student student3();
+	Student student1("A");
+	pStudentList->push_back(student1);
+	Student student2("B");
+	pStudentList->push_back(student2);
+	Student student3("C");
+	pStudentList->push_back(student3);
+	Student student4("D");
+	pStudentList->push_back(student4);
+	Student student5("E");
+	pStudentList->push_back(student5);
+	Student student6("F");
+	pStudentList->push_back(student6);
+	Student student7("G");
+	pStudentList->push_back(student7);
+	Student student8("H");
+	pStudentList->push_back(student8);
+	Student student9("I");
+	pStudentList->push_back(student9);
+	Student student10("J");
+	pStudentList->push_back(student10);
 
-	//create 3 modules
+	for (int i = 0; i < 11; i++) 
+	{std::cout << "The list looks like " << pStudentList->at(0).name << " to vector list" << std::endl;}
 
+	std::cout << std::endl;
+
+	//create 3 modules on heap
+	Module CPP("C++");
+	Module Python("Python");
+	Module HTML("HTML");
+
+	//delete everything
+	delete pStudentList;
 	std::cout << std::endl;
 
 	system("PAUSE");

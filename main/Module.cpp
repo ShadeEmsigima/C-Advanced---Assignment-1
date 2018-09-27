@@ -2,16 +2,18 @@
 #include "Module.h"
 #include <iostream>
 
-Module::Module(std::string name)
+Module::Module(std::string givenName)
 {
-	std::cout << "Making module " + name << std::endl;
+	name = givenName;
+	pModuleList->push_back(givenName);
+	std::cout << "Added module " + pModuleList->at(0) + " to vector list" << std::endl;
 	//make a module in the heap and save it to the list
 }
 
 
 Module::~Module()
 {
-	//destroy the module
+	delete pModuleList;
 }
 
 void Module::assignToModule()

@@ -2,14 +2,17 @@
 #include "Student.h"
 
 
-Student::Student()
+Student::Student(std::string givenName)
 {
-	
+	name = givenName;
+	ecPoints = 0;
+
 }
 
 
 Student::~Student()
 {
+	//delete pStudentList;
 }
 
 /*void Module::assignToModule() 
@@ -18,3 +21,9 @@ Student::~Student()
 	//Other variables shall be marked with "virtual" so that the program knows 
 	//you know there are variables missing, but that its elswhere to be found.
 }*/
+
+void Student::addStudentToList(Student studentObj) 
+{
+	//pStudentList->push_back(studentObj);
+	//std::cout << "Added student " << pStudentList->at(0).name << " to vector list" << std::endl;
+}
